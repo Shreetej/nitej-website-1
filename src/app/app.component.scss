@@ -1,0 +1,95 @@
+/* src/app/app.component.scss */
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(18, 18, 18, 0.8);
+  padding: 1rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo {
+    width: 7%;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem;
+      &.active {
+        border-bottom: 2px solid #ff4c4c;
+      }
+      &:hover {
+        color: #ff4c4c;
+      }
+      font-weight: 400;
+      font-size: 18px;
+    }
+
+    .get-started {
+      background-color: #ff4c4c;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+      &:hover {
+        background-color: #e04343;
+      }
+    }
+  }
+}
+
+// main {
+//   min-height: calc(100vh - 70px);
+//   padding: 2rem;
+//   color: white;
+//   background-image: url("/assets/background.avif");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
+
+main {
+  min-height: calc(100vh - 70px);
+  padding: 2rem;
+  color: white;
+
+  /* Background image setup */
+  background-image: url("/assets/background.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This keeps the image fixed while content scrolls */
+
+  /* Optional: Add a subtle animation effect */
+  animation: backgroundFade 20s ease-in-out infinite;
+}
+
+/* Keyframes for background animation (optional) */
+@keyframes backgroundFade {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}

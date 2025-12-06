@@ -1,0 +1,153 @@
+<div class="header-content">
+  <h1>Get Started</h1>
+  <p>Let's give your business what it needs to grow.</p>
+</div>
+
+<section class="get-started">
+  <div class="container">
+    <div class="contact-section">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Have some big idea or brand to develop and need help?</p>
+      </div>
+
+      <!-- <form class="contact-form"> -->
+      <form
+        class="contact-form"
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="form-group-pair">
+          <div>
+            <input
+              type="text"
+              placeholder="First name *"
+              formControlName="firstName"
+            />
+            <div
+              *ngIf="
+                contactForm.get('firstName')?.touched &&
+                contactForm.get('firstName')?.invalid
+              "
+              class="text-danger"
+            >
+              <small>First name is required.</small>
+            </div>
+          </div>
+
+          <div>
+            <input
+              type="text"
+              placeholder="Last name *"
+              formControlName="lastName"
+            />
+            <div
+              *ngIf="
+                contactForm.get('lastName')?.touched &&
+                contactForm.get('lastName')?.invalid
+              "
+              class="text-danger"
+            >
+              <small>Last name is required.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group-pair">
+          <div>
+            <input type="email" placeholder="Email *" formControlName="email" />
+            <div
+              *ngIf="
+                contactForm.get('email')?.touched &&
+                contactForm.get('email')?.invalid
+              "
+              class="text-danger"
+            >
+              <small *ngIf="contactForm.get('email')?.errors?.['required']"
+                >Email is required.</small
+              >
+              <small *ngIf="contactForm.get('email')?.errors?.['email']"
+                >Enter a valid email.</small
+              >
+            </div>
+          </div>
+
+          <div>
+            <input
+              type="text"
+              placeholder="Company"
+              formControlName="company"
+            />
+          </div>
+        </div>
+
+        <div class="form-group-pair">
+          <div>
+            <input type="tel" placeholder="Phone *" formControlName="phone" />
+            <div
+              *ngIf="
+                contactForm.get('phone')?.touched &&
+                contactForm.get('phone')?.invalid
+              "
+              class="text-danger"
+            >
+              <small *ngIf="contactForm.get('phone')?.errors?.['required']"
+                >Phone number is required.</small
+              >
+              <small *ngIf="contactForm.get('phone')?.errors?.['pattern']"
+                >Enter a valid 10-digit phone number.</small
+              >
+            </div>
+          </div>
+
+          <div>
+            <input
+              type="text"
+              placeholder="Subject *"
+              formControlName="subject"
+            />
+            <div
+              *ngIf="
+                contactForm.get('subject')?.touched &&
+                contactForm.get('subject')?.invalid
+              "
+              class="text-danger"
+            >
+              <small>Subject is required.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group-pair">
+          <div style="flex: 2; display: flex; flex-direction: column">
+            <textarea
+              id="message"
+              class="message"
+              formControlName="message"
+              placeholder="How can we help you? *"
+              rows="4"
+            ></textarea>
+            <div
+              *ngIf="
+                contactForm.get('message')?.touched &&
+                contactForm.get('message')?.invalid
+              "
+              class="text-danger"
+            >
+              <small>Message is required.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group-pair">
+          <!-- <button type="submit" [disabled]="contactForm.invalid">Submit</button> -->
+          <button type="submit" [disabled]="contactForm.invalid || isLoading">
+            <span *ngIf="isLoading">Sending...</span>
+            <span *ngIf="!isLoading">Send Message</span>
+          </button>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

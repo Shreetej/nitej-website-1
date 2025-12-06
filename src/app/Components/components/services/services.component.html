@@ -1,0 +1,26 @@
+<div class="services-container">
+  <h1>Dive Into the New Age of Accelerated Growth</h1>
+  <h3>Our Services</h3>
+
+  <div class="service-item" *ngFor="let service of services; let i = index">
+    <div class="icon">
+      <div [ngClass]="{ 'red-icon': i % 2 !== 0, 'blue-icon': i % 2 === 0 }">
+        <i class="{{ service.icon }}"></i>
+      </div>
+    </div>
+    <div class="content">
+      <h4>{{ service.title }}</h4>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+</div>
+<div class="services">
+  <div class="info-section choose-us">
+    <h3>We Integrate With Your Ecosystem</h3>
+  </div>
+  <div class="card-section choose-us-options">
+    <p>At Nitej, we specialize in delivering end-to-end software solutions that help businesses thrive in the digital age. Whether you're a startup building your first MVP or an enterprise optimizing complex systems, our team of expert developers, designers, and engineers is here to bring your ideas to life.
+
+      From custom software and mobile apps to cloud solutions and system integrations, we offer a comprehensive suite of services tailored to your business goals. With a strong focus on quality, performance, and user experience, we ensure your technology not only works — it works for you.</p>
+  </div>
+</div>

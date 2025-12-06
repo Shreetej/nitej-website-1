@@ -1,0 +1,150 @@
+.services-container {
+  padding: 3rem 2rem;
+  color: white;
+  background-image: url("/assets/services.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #aaa;
+  }
+
+  .service-item {
+    display: flex;
+
+    border: 1px solid rgba(255, 255, 255, 0.15); /* full border for merged look */
+    border-radius: 12px;
+    align-items: stretch;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-bottom: 1.5rem; /* spacing between cards */
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .icon {
+      width: 20%;
+      border-right: 1px solid rgba(255, 255, 255, 0.15); /* divider */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      transform: translateY(50px);
+      opacity: 0;
+      animation: slide-up 0.8s ease-out forwards;
+      padding: 59px 0;
+    }
+
+    .content {
+      width: 80%;
+      flex: 1;
+      transform: translateX(-50px);
+      opacity: 0;
+      animation: slide-right 0.8s ease-out forwards;
+      animation-delay: 0.3s;
+      padding: 59px 1.5rem; /* side padding for breathing room */
+
+      h4 {
+        margin: 0 0 0.75rem 0;
+        font-size: 1.2rem;
+      }
+
+      p {
+        margin: 0;
+        color: #ccc;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+/* Animations */
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Icon color variants */
+.blue-icon {
+  background-color: #3b3bff;
+  padding: 23px 29px;
+  border-radius: 10px;
+}
+
+.red-icon {
+  background-color: #ff3b3b;
+  padding: 23px 29px;
+  border-radius: 10px;
+}
+
+.services {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 88px;
+}
+
+.services .info-section {
+  width: 40%;
+  padding: 101px;
+  border: 1px solid grey;
+}
+
+.services .card-section {
+  width: 60%;
+  display: flex;
+  border: 1px solid grey;
+  padding: 0 180px;
+}
+
+.choose-us {
+  h3 {
+    margin-top: 184px;
+  }
+  background-image: url("/assets/ecosystem.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px; /* Optional: adds spacing */
+  color: white; /* Optional: improves text visibility */
+  padding: 0 !important;
+  height: 442px;
+  text-align: center;
+}
+.choose-us-options {
+  color: #8a8a8a;
+  p {
+    margin: 120px 0 0 0;
+    color: #c6c7c8;
+  }
+}

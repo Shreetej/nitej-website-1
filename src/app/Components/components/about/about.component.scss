@@ -1,0 +1,79 @@
+/* Page background setup */
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 37px;
+}
+p {
+  // width: 60%;
+  // font-size: 24px;
+  font-size: 19px;
+  margin-bottom: 56px;
+}
+
+.page-background {
+  background-image: url("/assets/page-bg.jpg"); /* optional */
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Parent container: one row */
+.parent {
+  display: flex;
+  flex-direction: row;
+  height: 450px; /* ✅ Increased row height */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Child shared styles */
+.child {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow: auto; /* In case content overflows */
+}
+
+/* ✅ Adjust width if needed */
+.child-35 {
+  width: 40%; /* changed from 35% to 40% */
+  background-color: rgba(0, 0, 0, 0.4); /* overlay if no bg-image */
+}
+
+.child-65 {
+  width: 60%; /* changed from 65% to 60% */
+  // background-color: rgba(0, 0, 0, 0.2) !important; /* overlay if no bg-image */
+  .details {
+    width: 38%;
+  }
+  color: #c6c7c8;
+  font-size: 18px;
+  background-color: black;
+}
+
+/* ✅ Background image only if .has-bg is present */
+.has-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+h3 {
+  font-weight: bold;
+  font-size: 32px;
+}
+.has-bg {
+  background-color: black;
+}

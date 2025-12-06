@@ -1,0 +1,133 @@
+.client-testimonial-section {
+  background-color: #0d0d0d; /* Main dark background */
+  color: white;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  min-height: 800px;
+}
+
+.client-testimonial-section .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* --- Left Column: Graphic Area --- */
+.graphic-area {
+  background-color: #111111; /* Slightly lighter black for left column */
+  /* Ensure alignment in the middle on desktop */
+}
+
+/* Abstract Graphic Styling (Pure CSS) */
+.abstract-graphic {
+  // width: 250px;
+  height: 250px;
+  // border: 1px solid rgba(255, 255, 255, 0.1);
+  // border-radius: 50%;
+  // position: relative;
+  // box-shadow: 0 0 50px rgba(255, 0, 0, 0.2);
+  // margin: 0 auto;
+}
+.abstract-graphic::before {
+  // content: '';
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // width: 100px;
+  // height: 100px;
+  // background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 0%, rgba(255, 0, 0, 0.1) 70%, transparent 100%);
+  // border-radius: 50%;
+  // animation: pulse 4s infinite alternate;
+}
+@keyframes pulse {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* --- Right Columns: Content Area --- */
+.content-area {
+  background-color: #0d0d0d;
+}
+
+/* Profile Images */
+.profile-img {
+  width: 100px; /* Control image size */
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #1f1f1f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Testimonial Text & Subtitles */
+.testimonial-text {
+  color: #eeeeee;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 90%; /* Keep text contained */
+}
+.client-profile p {
+  color: #c6c7c8; /* Muted gray for role/subtitle */
+}
+
+/* Star Ratings */
+.star-rating {
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  margin-top: 10px;
+}
+.star-icon {
+  color: #ffffff;
+  opacity: 0.8;
+}
+.star-icon.half {
+  opacity: 0.4; /* Simulate empty star/half opacity for half star */
+}
+
+/* Divider between rows */
+.divider {
+  border-top: 1px solid grey;
+  margin: 0 20px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 991.98px) {
+  .graphic-area {
+    min-height: 200px;
+    padding: 30px 15px !important;
+  }
+  .content-area {
+    padding-bottom: 30px;
+  }
+  .client-row > div {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+  .client-row .col-4 {
+    /* Make profile take full width on small screens */
+    width: 100%;
+    order: 1; /* Profile first */
+    padding-bottom: 0 !important;
+  }
+  .client-row .col-8 {
+    /* Make testimonial take full width on small screens */
+    width: 100%;
+    order: 2; /* Testimonial second */
+    padding-top: 0 !important;
+    padding-left: 15px !important; /* Reset padding for mobile */
+  }
+  .client-row {
+    flex-direction: column;
+  }
+}
+.border-all {
+  border: 1px solid grey;
+  .br-grey {
+    border: 1px solid grey;
+  }
+}

@@ -1,0 +1,158 @@
+/* Variables for easy color adjustments */
+:root {
+  --footer-bg-color: #1a1a1a; /* Very dark gray/black */
+  --text-color: #ffffff; /* White */
+  --link-hover-color: #e50914; /* Red accent (from image) */
+}
+
+.app-footer {
+  // background-color: var(--footer-bg-color);
+  // color: var(--text-color);
+  // font-family: Arial, sans-serif; /* Use your project's font */
+  padding-top: 50px; /* Space above the content */
+  background: black;
+  color: #8a8a8a;
+  font-size: 18px;
+}
+
+/* --- Main Content Layout --- */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  /* max-width: 1281px; */
+  margin: 0 4%;
+  /* padding: 0 20px 40px 20px; */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Section Styling --- */
+.footer-section {
+  flex-basis: 18%; /* Gives each section roughly equal space */
+  padding-right: 15px;
+}
+
+.footer-section h3 {
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Contact Information specifics */
+.contact-info p,
+.contact-info address {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.contact-info .company-name {
+  font-weight: bold;
+  // margin-top: -10px;
+}
+
+.contact-info .contact-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.contact-info .contact-link:hover {
+  color: var(--link-hover-color);
+  font-weight: 400;
+}
+
+/* --- List Styling for Services, Platforms, Company --- */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 17px;
+
+  a {
+    font-size: 18px !important;
+    font-weight: 400;
+  }
+}
+
+.footer-section a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  font-size: 0.95rem;
+}
+
+.footer-section a:hover {
+  color: var(--link-hover-color);
+}
+
+/* --- Social Media Styling --- */
+.social-links {
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+.social-links a {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+}
+
+/* --- Copyright Bar --- */
+.copyright-bar {
+  text-align: right;
+  padding: 15px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7); /* Slightly muted color */
+}
+
+/* --- Responsive Adjustments (Optional but recommended) --- */
+@media (max-width: 992px) {
+  .footer-content {
+    flex-wrap: wrap; /* Allows sections to stack on smaller screens */
+  }
+
+  .footer-section {
+    flex-basis: 45%; /* Two columns on medium screens */
+    margin-bottom: 30px;
+  }
+
+  /* Make social media separate on its own row */
+  .social-media {
+    flex-basis: 100%;
+  }
+
+  .copyright-bar {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-section {
+    flex-basis: 100%; /* Single column on mobile */
+  }
+
+  .footer-content {
+    padding: 0 15px 30px 15px;
+  }
+}
+.phone {
+  margin-bottom: 0 !important;
+}
