@@ -14,13 +14,13 @@ interface Service {
 })
 export class HomeComponent {
   clients = [
-    { name: 'Suyog Enterprises', logo: '/assets/suyogenterprises.png' },
-    { name: 'Redwalls', logo: '/assets/redwalls.png' },
-    { name: 'Dailzo', logo: '/assets/Dailzo_Logo.png' },
-    { name: 'Gawde Opticals', logo: '/assets/GawdeOpticals.png' },
-    { name: 'Herbeca', logo: '/assets/Herbeca.png' },
-    { name: 'Moveu', logo: '/assets/moveulogo.png' },
-    { name: 'Shetiratna', logo: '/assets/shetiratna.png' },
+    { name: 'Suyog Enterprises', logo: 'assets/suyogenterprises.png' },
+    { name: 'Redwalls', logo: 'assets/redwalls.png' },
+    { name: 'Dailzo', logo: 'assets/Dailzo_Logo.png' },
+    { name: 'Gawde Opticals', logo: 'assets/GawdeOpticals.png' },
+    { name: 'Herbeca', logo: 'assets/Herbeca.png' },
+    { name: 'Moveu', logo: 'assets/moveulogo.png' },
+    { name: 'Shetiratna', logo: 'assets/shetiratna.png' },
   ];
 
   carouselOptions = {
