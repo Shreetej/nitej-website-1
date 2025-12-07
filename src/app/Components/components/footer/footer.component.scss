@@ -115,7 +115,7 @@
 
 /* --- Copyright Bar --- */
 .copyright-bar {
-  text-align: right;
+  text-align: center;
   padding: 15px 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -143,7 +143,13 @@
     text-align: center;
   }
 }
+.social-icon{
+  width: 80%;
+}
 
+address{
+  font-size: 16px;
+}
 @media (max-width: 576px) {
   .footer-section {
     flex-basis: 100%; /* Single column on mobile */
