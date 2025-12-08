@@ -8,19 +8,30 @@
     class="logo"
   />
   <!-- <img src="/nitej-website/assets/nitej.png" alt="Nitej Logo" class="logo"> -->
-  <nav>
+  <button class="hamburger" (click)="toggleMenu()">&#9776;</button>
+  <nav [class.show]="isMenuOpen">
     <a
       routerLink="/"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
+      (click)="closeMenu()"
       >Home</a
     >
-    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <!-- <a routerLink="/products" routerLinkActive="active">Products</a>
     <a routerLink="/services" routerLinkActive="active">Services</a>
-    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/about" routerLinkActive="active">About</a> -->
+    <a routerLink="/products" routerLinkActive="active" (click)="closeMenu()"
+    >Products</a
+  >
+  <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()"
+    >Services</a
+  >
+  <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
 
     <!-- <a routerLink="/login" routerLinkActive="active">Log In</a> -->
-    <button class="get-started" routerLink="/get-started">Get Started</button>
+    <!-- <button class="get-started" routerLink="/get-started">Get Started</button> -->
+    <button class="get-started" routerLink="/get-started" (click)="closeMenu()">Get Started</button>
+  
   </nav>
 </header>
 

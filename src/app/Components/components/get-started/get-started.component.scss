@@ -189,3 +189,12 @@ body {
     width: 100%;
   }
 }
+/* Extra large screen */
+@media (min-width: 1200px) {
+  .container{
+    width: 1200px !important;
+  }
+  .contact-info p{
+    padding : 0 !important;
+  }
+}
