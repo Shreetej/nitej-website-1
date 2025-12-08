@@ -195,3 +195,84 @@ img {
 .mt-0 {
   margin-top: 0 !important;
 }
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .home-text {
+    padding-left: 20px;
+    margin-top: 20px;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .services {
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 20px;
+  }
+
+  .info-section {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    text-align: center;
+  }
+
+  .card-section {
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+
+    .card {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto;
+    }
+  }
+
+  .choose-us {
+    height: auto;
+    padding: 20px;
+    h3 {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+  }
+
+  .choose-us-options ul {
+    margin: 20px;
+    padding: 0;
+    li {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  .client-section {
+    padding: 20px;
+    h1 {
+      font-size: 28px;
+    }
+    .d-flex {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    img {
+      width: 80px;
+    }
+  }
+}
+
