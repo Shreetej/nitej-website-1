@@ -16,15 +16,20 @@
   <!-- Navigation links -->
   <nav [class.open]="menuOpen">
     <ul>
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/services">Services</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
+      <li><a routerLink="/home" (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="/products" (click)="toggleMenu()">Products</a></li>
+      <li><a routerLink="/services" (click)="toggleMenu()">Services</a></li>
+      <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
+      <button
+        class="get-started"
+        routerLink="/get-started"
+        (click)="toggleMenu()"
+      >
+        Get Started
+      </button>
     </ul>
   </nav>
 </header>
-
-
 
 <!-- <header>
   <img

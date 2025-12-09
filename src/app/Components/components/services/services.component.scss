@@ -148,3 +148,75 @@
     color: #c6c7c8;
   }
 }
+
+/* Existing styles remain unchanged */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 2rem 1rem;
+    min-height: auto;
+
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .service-item {
+      flex-direction: column; /* stack icon and content */
+      text-align: center;
+
+      .icon {
+        width: 100%;
+        border-right: none;
+        padding: 20px 0;
+      }
+
+      .content {
+        width: 100%;
+        padding: 20px 1rem;
+      }
+    }
+  }
+
+  .services {
+    flex-direction: column; /* stack info + card section */
+    margin-top: 40px;
+
+    .info-section {
+      width: 100%;
+      padding: 40px 20px;
+      border: none;
+      height: auto;
+
+      h3 {
+        margin-top: 20px;
+        font-size: 1.2rem;
+      }
+    }
+
+    .card-section {
+      width: 100%;
+      padding: 20px;
+      border: none;
+
+      p {
+        margin: 40px 0 0 0;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        text-align: center;
+      }
+    }
+  }
+
+  .choose-us {
+    height: auto;
+    background-size: cover;
+    padding: 20px;
+  }
+}

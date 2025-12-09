@@ -174,7 +174,7 @@ main {
 
   .logo {
     flex: 1;
-    text-align: center; /* Center logo */
+    text-align: left; /* Center logo */
     img {
       height: 40px;
     }
@@ -215,6 +215,9 @@ main {
 
 /* Mobile view */
 @media (max-width: 768px) {
+  .get-started{
+    margin: 0 !important;
+  }
   .header {
     .hamburger {
       display: flex;
@@ -256,4 +259,5 @@ main {
       margin-top: 0 !important;
     }
   }
+  
 }
