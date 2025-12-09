@@ -152,48 +152,108 @@ main {
   main {
     padding: 1.5rem;
   }
-}
-
-/* d:/nitej-website/src/app/app.component.css */
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .card-section {
+    .mt-105 {
+      margin-top: 0 !important;
+    }
+    .mt-210 {
+      margin-top: 0 !important;
+    }
   }
-  /* Tablet view */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    @media (max-width: 768px) {
-      header {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 0.5rem 1rem;
+}
 
-        .logo {
-          width: 120px; /* fixed size for mobile */
-        }
-      }
+/* src/app/components/header/header.component.scss */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #0c0f24;
+  color: white;
+  position: relative;
 
-      .hamburger {
-        background-color: #ff4c4c;
-        border-radius: 4px;
-      }
+  .logo {
+    flex: 1;
+    text-align: center; /* Center logo */
+    img {
+      height: 40px;
+    }
+  }
 
-      main {
-        padding: 1rem;
-        background-attachment: scroll; /* avoid fixed background issues on mobile */
+  nav {
+    ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
       }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .header {
+    .hamburger {
+      display: flex;
+      position: absolute;
+      left: 20px;
+    }
+
+    nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #0c0f24;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+      }
+    }
+
+    nav.open {
+      max-height: 300px; /* expands menu */
+    }
+
+    .logo {
+      text-align: center; /* keep logo centered */
+    }
+  }
+
+  .card-section {
+    .mt-105 {
+      margin-top: 0 !important;
+    }
+    .mt-210 {
+      margin-top: 0 !important;
     }
   }
 }

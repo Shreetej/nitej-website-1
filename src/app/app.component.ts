@@ -29,11 +29,9 @@ export class AppComponent {
   }
   isMenuOpen = false;
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
+  menuOpen = false;
 
-  closeMenu() {
-    this.isMenuOpen = false;
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 }
