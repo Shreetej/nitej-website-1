@@ -201,7 +201,7 @@ img {
   .home-text {
     padding-left: 20px;
     margin-top: 20px;
-
+    text-align: center;
     h1 {
       font-size: 32px;
     }
@@ -234,11 +234,19 @@ img {
     flex-wrap: wrap;
     padding: 20px;
     justify-content: center;
-
+    .mt-105 {
+      margin-top: 0 !important;
+    }
+    .mt-210 {
+      margin-top: 0 !important;
+    }
+    .mr-28 {
+      top: unset !important;
+    }
     .card {
       width: 100%;
       max-width: 300px;
-      margin: 10px auto;
+      margin: 10px;
     }
   }
 
@@ -275,4 +283,3 @@ img {
     }
   }
 }
-

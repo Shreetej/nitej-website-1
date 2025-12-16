@@ -1,32 +1,63 @@
 <!-- src/app/app.component.html -->
-<header>
-  <!-- <div class="logo">NITEJ</div> -->
+
+<!-- src/app/components/header/header.component.html -->
+<header class="header">
+  <div class="logo">
+    <img src="assets/nitej.png" alt="Nitej Logo" />
+  </div>
+
+  <!-- Hamburger icon -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation links -->
+  <nav [class.open]="menuOpen">
+    <ul>
+      <li><a routerLink="/home" (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="/products" (click)="toggleMenu()">Products</a></li>
+      <li><a routerLink="/services" (click)="toggleMenu()">Services</a></li>
+      <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
+      <button
+        class="get-started"
+        routerLink="/get-started"
+        (click)="toggleMenu()"
+      >
+        Get Started
+      </button>
+    </ul>
+  </nav>
+</header>
+
+<!-- <header>
   <img
     src="assets/nitej.png"
     routerLink="/home"
     alt="Nitej Logo"
     class="logo"
   />
-  <!-- <img src="/nitej-website/assets/nitej.png" alt="Nitej Logo" class="logo"> -->
-  <nav>
+  <button class="hamburger" (click)="toggleMenu()">&#9776;</button>
+  <nav [class.show]="isMenuOpen">
     <a
       routerLink="/"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
+      (click)="closeMenu()"
       >Home</a
     >
-    <a routerLink="/products" routerLinkActive="active">Products</a>
-    <a routerLink="/services" routerLinkActive="active">Services</a>
-    <a routerLink="/about" routerLinkActive="active">About</a>
-
-    <!-- <a routerLink="/login" routerLinkActive="active">Log In</a> -->
-    <button class="get-started" routerLink="/get-started">Get Started</button>
+    <a routerLink="/products" routerLinkActive="active" (click)="closeMenu()"
+    >Products</a
+  >
+  <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()"
+    >Services</a
+  >
+  <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+    <button class="get-started" routerLink="/get-started" (click)="closeMenu()">Get Started</button>
   </nav>
-</header>
+</header> -->
 
-<!-- <main>
-  <router-outlet></router-outlet>
-</main> -->
 <div class="background-layer"></div>
 <main>
   <router-outlet></router-outlet>

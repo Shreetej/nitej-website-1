@@ -77,3 +77,70 @@ h3 {
 .has-bg {
   background-color: black;
 }
+
+/* Existing styles remain unchanged */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%; /* prevent text stretching edge-to-edge */
+  }
+
+  .parent {
+    flex-direction: column; /* stack children vertically */
+    height: auto; /* let content define height */
+    margin-bottom: 30px;
+  }
+
+  .child {
+    width: 100%; /* full width on mobile */
+    padding: 15px;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .child-35,
+  .child-65 {
+    width: 100%; /* override desktop widths */
+  }
+
+  .child-65 .details {
+    width: 100%; /* expand text container */
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Optional: even smaller devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .child {
+    padding: 10px;
+  }
+}

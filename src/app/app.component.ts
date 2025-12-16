@@ -27,4 +27,11 @@ export class AppComponent {
         }
       });
   }
+  isMenuOpen = false;
+
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }
