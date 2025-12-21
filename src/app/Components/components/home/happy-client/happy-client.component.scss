@@ -20,7 +20,7 @@
 /* Abstract Graphic Styling (Pure CSS) */
 .abstract-graphic {
   // width: 250px;
-  height: 250px;
+  height: auto;
   // border: 1px solid rgba(255, 255, 255, 0.1);
   // border-radius: 50%;
   // position: relative;
@@ -97,6 +97,13 @@
 
 /* Responsive adjustments for mobile */
 @media (max-width: 991.98px) {
+  .client-testimonial-section h2 {
+    margin-bottom: 1rem !important;
+  }
+  .client-testimonial-section .py-5 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
   .graphic-area {
     min-height: 200px;
     padding: 30px 15px !important;
